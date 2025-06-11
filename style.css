@@ -1,3 +1,6 @@
-body{
-    background: linear-gradient(to right, rgb(78, 84, 200), rgb(143, 148, 251));
+body {
+    text-align: center;
+    background-color: #828282;
+    padding: 20px;
 }
+
