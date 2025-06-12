@@ -1,4 +1,4 @@
 body {
     text-align: center;
-    background-color: #000000;
+    background: linear-gradient(to right, rgb(35, 37, 38), rgb(65, 67, 69));
 }
