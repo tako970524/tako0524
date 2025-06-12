@@ -20,14 +20,13 @@ body {
     flex-wrap: wrap; /* 手機時會自動換行 */
 }
 #main_top{
-    background-color: rgb(109, 109, 109);
     border-radius: 10px;
     padding: 20px;
 
 }
 #main_left,
 #main_right {
-    background-color: rgb(109, 109, 109);
+
     padding: 20px;
     border-radius: 10px;
     width: 300px;
@@ -37,4 +36,20 @@ h1, h2, h3, p, div {
     font-family: "Microsoft JhengHei", "微軟正黑體", sans-serif;
     font-weight: bold;
     color: white;
+}
+
+#img1{
+    justify-self: center;
+    width: 200px;           /* 可以根據需要調整大小 */
+    aspect-ratio: 1 / 1;    /* 保持 1:1 比例 */
+    overflow: hidden;       /* 超出部分裁切 */
+    border: 4px solid white; /* 邊框設定 */
+    border-radius: 10px;    /* 可選，圓角 */
+}
+
+#img1 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;      /* 讓圖片鋪滿並裁切成正方形 */
+    display: block;
 }
