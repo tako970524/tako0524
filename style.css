@@ -6,10 +6,9 @@ body {
 }
 
 #main{
-    padding-top: 1000px;
     justify-content: center;
     justify-self: center;
-    font-size: 30px;
+    font-size: 25px;
 }
 
 #main1{
@@ -20,10 +19,15 @@ body {
     margin-top: 30px;
     flex-wrap: wrap; /* 手機時會自動換行 */
 }
+#main_right,#main_left{
+    max-width: 230px;
+    gap: 40px;
+    justify-self: center;
+}
 
 h1, h2, h3, p, div {
     font-family: "Microsoft JhengHei", "微軟正黑體", sans-serif;
-    font-weight: bold;
+    font-weight: normal;
     color: white;
 }
 
