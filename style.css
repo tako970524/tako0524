@@ -1,12 +1,10 @@
 body {
-    font-family: "Chocolate Classical Sans", sans-serif;
-    font-weight: 400;
-    font-style: normal;
     text-align: center;
     padding-top: 0px;
     background: linear-gradient(to right, rgb(35, 37, 38), rgb(65, 67, 69));
     margin: 0;
 }
+
 #main{
     justify-content: center;
     justify-self: center;
@@ -33,4 +31,10 @@ body {
     padding: 20px;
     border-radius: 10px;
     width: 300px;
+}
+
+h1, h2, h3, p, div {
+    font-family: "Microsoft JhengHei", "微軟正黑體", sans-serif;
+    font-weight: bold;
+    color: white;
 }
