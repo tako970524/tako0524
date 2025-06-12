@@ -1,4 +1,7 @@
 body {
+    font-family: "Chocolate Classical Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
     text-align: center;
     padding-top: 0px;
     background: linear-gradient(to right, rgb(35, 37, 38), rgb(65, 67, 69));
