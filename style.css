@@ -5,8 +5,11 @@ body {
     margin: 0;
 }
 
+#lottie-container{
+    padding-bottom: 150px;
+}
+
 #main{
-    padding-top: 200px;
     justify-content: center;
     justify-self: center;
     font-size: 30px;
@@ -29,7 +32,7 @@ body {
     justify-self: center;
 }
 
-h1, h2, h3, p, div {
+#main {
     font-family: "Microsoft JhengHei", "微軟正黑體", sans-serif;
     font-weight: normal;
     color: white;
@@ -49,4 +52,28 @@ h1, h2, h3, p, div {
     height: 100%;
     object-fit: cover;      /* 讓圖片鋪滿並裁切成正方形 */
     display: block;
+}
+
+
+#link {
+    display: flex;
+    justify-content: center; /* 讓整個 link 區塊置中 */
+    margin-top: 10px;
+}
+
+#link div {
+    text-align: left;        /* 讓裡面的文字靠左對齊 */
+    color: white;
+    font-family: "Microsoft JhengHei", "微軟正黑體", sans-serif;
+}
+
+#mid{
+    margin-top: 30px;
+}
+
+#mid h1{
+    font-family: "Kaisei HarunoUmi", serif;
+    font-style: normal;
+    font-size: 50px;
+    color: white;
 }
