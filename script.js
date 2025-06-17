@@ -14,47 +14,48 @@ lottie.loadAnimation({
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-  const sideMenu = document.getElementById("sideMenu"); //側邊選單
-  const lottieContainer = document.getElementById("hamburger-lottie"); //漢堡動畫容器
+  const sideMenu = document.getElementById("sideMenu");
+  const lottieContainer = document.getElementById("hamburger-lottie");
 
-  let menuOpen = false; //記錄選單是否展開
+  let menuOpen = false;
+  let animationReady = false;
 
-  //載入漢堡選單動畫
+  // 載入漢堡動畫
   const animation = lottie.loadAnimation({
     container: lottieContainer,
     renderer: 'svg',
     loop: false,
     autoplay: false,
-    path: 'anime/ham.json', //自製動畫JSON
+    path: 'anime/ham.json',
     rendererSettings: {
       preserveAspectRatio: 'xMidYMid meet'
     }
   });
 
-  //動畫載入完成後停在第一幀
-  animation.addEventListener('DOMLoaded', () => {
+  // 等動畫資料準備好後再標記為可操作
+  animation.addEventListener('data_ready', () => {
     animation.goToAndStop(0, true);
+    animationReady = true;
   });
 
-  //點擊漢堡動畫控制展開/收合
+  // 防止動畫還沒準備好時點擊出錯
   lottieContainer.addEventListener('click', () => {
+    if (!animationReady) return; // 尚未準備好
+
     if (!menuOpen) {
-      //開啟選單+正向播放動畫
       sideMenu.classList.add("open");
       animation.playSegments([0, animation.totalFrames], true);
-      menuOpen = true;
     } else {
-      //關閉選單+倒著播放動畫
       sideMenu.classList.remove("open");
       animation.playSegments([animation.totalFrames, 0], true);
-      menuOpen = false;
     }
+    menuOpen = !menuOpen;
   });
 
-  //點選選單連結時自動關閉選單並播放動畫倒退
+  // 點選選單連結時也觸發動畫關閉
   document.querySelectorAll('#sideMenu a').forEach(link => {
     link.addEventListener('click', () => {
-      if (menuOpen) {
+      if (menuOpen && animationReady) {
         sideMenu.classList.remove("open");
         animation.playSegments([animation.totalFrames, 0], true);
         menuOpen = false;
