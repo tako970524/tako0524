@@ -1,32 +1,41 @@
+<!-- 基本設定&字體連結 -->
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
+    <!-- Google Fonts字型 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kaisei+HarunoUmi&display=swap" rel="stylesheet">
+
+    <!-- 禁止快取(避免更新後看不到 -->
     <meta http-equiv='cache-control' content='no-cache'> 
     <meta http-equiv='expires' content='0'> 
     <meta http-equiv='pragma' content='no-cache'>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>期末網頁</title>
+
     <link rel="stylesheet" href="style.css">
+
+    <!-- Lottie動畫套件 -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
 </head>
 <body>
-    <!-- 漢堡選單按鈕（右上角） -->
+    <!-- Lottie動畫作為漢堡選單按鈕 -->
     <div id="hamburger-lottie" class="hamburger-icon"></div>
 
-    <!-- 漢堡選單內容（右側滑出） -->
+    <!-- 側邊滑出選單 -->
     <div class="side-menu" id="sideMenu">
-        <a href="#main">首頁</a>
-        <a href="#main1">興趣技能</a>
+        <a href="#lottie-container">首頁</a>
+        <a href="#main">興趣技能</a>
         <a href="#link">聯絡資訊</a>
-        <a href="#mid">標語</a>
     </div>
 
-
+    <!-- 首頁Lottie區塊 -->
     <div id="lottie-container"></div>
+
+    <!-- 主要介紹區塊 -->
     <div id="main">
         <div id="img1">
             <img src="img/img1.png">
@@ -35,7 +44,7 @@
             <h1>HY_Tako</h1>
             <h2>張心宇</h2>
         </div>
-        
+
         <div id="main1">
             <div id="main_left">
                 <h1>興趣:</h1>
@@ -48,22 +57,23 @@
         </div>
     </div>
 
+    <!-- 聯絡方式 -->
     <div id="link">
         <div>
             <h2>gmail : tako970524@gmail.com</h2>
             <h2>discord : tako_0524</h2>
             <h2>instagram : hsinyu970524</h2>
             <h2>bilibili : HY_Tako, (翻譯一些影片&廣播</h2>
-
         </div>
     </div>
 
+    <!-- 結尾LOGO -->
     <div id="mid">
         <h1>その“何か”を見に行こう</h1>
         <div id="midimg1"><img src="img/HA_LOGO_HD.png"></div>
     </div>
 
+    <!-- JavaScript -->
     <script src="script.js"></script>
 </body>
 </html>
-

@@ -1,132 +1,80 @@
+/* 整體背景與排版設定 */
 body {
-    text-align: center;
-    padding-top: 0px;
-    background: linear-gradient(to right, rgb(35, 37, 38), rgb(65, 67, 69));
-    margin: 0;
+  margin: 0;
+  padding-top: 0px;
+  background: linear-gradient(to right, rgb(35, 37, 38), rgb(65, 67, 69));
+  text-align: center;
+  font-family: "Microsoft JhengHei", "微軟正黑體", sans-serif;
 }
 
-#lottie-container{
-    padding-bottom: 150px;
+/* 首頁Lottie動畫區塊 */
+#lottie-container {
+  padding-bottom: 150px;
 }
 
-#main{
-    justify-content: center;
-    justify-self: center;
-    font-size: 30px;
-    border: 4px solid white;
-    border-radius: 10px;
-    padding: 40px;
-}
-
-#main1{
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 40px;
-    margin-top: 30px;
-    flex-wrap: wrap;
-}
-#main_right,#main_left{
-    max-width: 230px;
-    gap: 40px;
-    justify-self: center;
-}
-
+/* 主區塊框線與排版 */
 #main {
-    font-family: "Microsoft JhengHei", "微軟正黑體", sans-serif;
-    font-weight: normal;
-    color: white;
+  font-size: 30px;
+  border: 4px solid white;
+  border-radius: 10px;
+  padding: 40px;
+  color: white;
 }
 
-#img1{
-    justify-self: center;
-    width: 200px;
-    aspect-ratio: 1 / 1;
-    overflow: hidden;
-    border: 4px solid white;
-    border-radius: 10px;
+/* 興趣技能排版 */
+#main1 {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  margin-top: 30px;
+  flex-wrap: wrap;
 }
 
-#img1 img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
+#main_right, #main_left {
+  max-width: 230px;
 }
 
+/* img區塊 */
+#img1 {
+  width: 200px;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border: 4px solid white;
+  border-radius: 10px;
+}
 
+#img1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* 聯絡資訊排版 */
 #link {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
 }
 
 #link div {
-    text-align: left;
-    color: white;
-    font-family: "Microsoft JhengHei", "微軟正黑體", sans-serif;
-}
-
-#mid{
-    margin-top: 30px;
-}
-
-#mid h1{
-    font-family: "Kaisei HarunoUmi", serif;
-    font-style: normal;
-    font-size: 50px;
-    color: white;
-}
-
-/* 漢堡按鈕 */
-.hamburger {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  font-size: 30px;
-  cursor: pointer;
-  z-index: 1001;
+  text-align: left;
   color: white;
 }
 
-/* 漢堡選單右側滑出樣式 */
-.side-menu {
-  position: fixed;
-  top: 0;
-  right: -250px; /* 隱藏在右側 */
-  width: 250px;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.9);
-  transition: right 0.4s ease;
-  padding-top: 60px;
-  z-index: 1000;
+/* 標語區塊 */
+#mid {
+  margin-top: 30px;
 }
 
-.side-menu a {
-  display: block;
+#mid h1 {
+  font-family: "Kaisei HarunoUmi", serif;
+  font-size: 50px;
   color: white;
-  text-decoration: none;
-  padding: 16px;
-  font-family: "Microsoft JhengHei", "微軟正黑體", sans-serif;
 }
 
-.side-menu a:hover {
-  background-color: white;
-  color: black;
-}
-
-/* 開啟選單時的 class */
-.side-menu.open {
-  right: 0;
-}
-
-body {
-  margin: 0;
-  font-family: "Microsoft JhengHei", "微軟正黑體", sans-serif;
-  background: linear-gradient(to right, rgb(35, 37, 38), rgb(65, 67, 69));
-}
-
-/* Lottie Icon */
+/* Lottie動畫用作漢堡圖示 */
 .hamburger-icon {
   width: 60px;
   height: 60px;
@@ -137,11 +85,11 @@ body {
   cursor: pointer;
 }
 
-/* 側邊選單 */
+/* 側邊選單樣式(預設隱藏在右邊 */
 .side-menu {
   position: fixed;
   top: 0;
-  right: -250px;
+  right: -250px; /* 選單關閉時 */
   width: 250px;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.95);
@@ -150,10 +98,12 @@ body {
   z-index: 1000;
 }
 
+/* 展開選單時往左滑進來 */
 .side-menu.open {
   right: 0;
 }
 
+/* 選單連結樣式 */
 .side-menu a {
   display: block;
   color: white;
