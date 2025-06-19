@@ -3,7 +3,7 @@ const animation = lottie.loadAnimation({
     renderer: 'svg',
     loop: false,
     autoplay: false,
-    path: 'anime/ham1.json' // 你的動畫 JSON 路徑
+    path: 'anime/ham.json' // 你的動畫 JSON 路徑
 });
 
 animation.addEventListener('DOMLoaded', () => {
