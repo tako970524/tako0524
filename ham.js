@@ -3,15 +3,45 @@ document.addEventListener("DOMContentLoaded", function () {
   const sideMenu = document.getElementById("sideMenu");
   const menuLinks = sideMenu.querySelectorAll("a");
 
-  // 漢堡點擊開關選單
-  hamburger.addEventListener("click", function () {
-    sideMenu.classList.toggle("open");
+  // 載入 bodymovin 動畫
+  const hamburgerAnim = lottie.loadAnimation({
+    container: hamburger,
+    renderer: 'svg',
+    loop: false,
+    autoplay: false,
+    path: 'anime/ham.json'
   });
 
-  // 點選任一選單自動關閉選單
+  // 初始停在第一幀
+  hamburgerAnim.goToAndStop(0, true);
+
+  // 開關選單 + 動畫控制
+  let menuOpen = false;
+
+  hamburger.addEventListener("click", function () {
+    if (!menuOpen) {
+      // 正向播放（開啟選單）
+      hamburgerAnim.setDirection(1);
+      hamburgerAnim.play();
+      sideMenu.classList.add("open");
+    } else {
+      // 反向播放（關閉選單）
+      hamburgerAnim.setDirection(-1);
+      hamburgerAnim.play();
+      sideMenu.classList.remove("open");
+    }
+    menuOpen = !menuOpen;
+  });
+
+  // 點選選單連結時也反向動畫並收起選單
   menuLinks.forEach(link => {
     link.addEventListener("click", function () {
-      sideMenu.classList.remove("open");
+      if (menuOpen) {
+        hamburgerAnim.setDirection(-1);
+        hamburgerAnim.play();
+        sideMenu.classList.remove("open");
+        menuOpen = false;
+      }
     });
   });
 });
