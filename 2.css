@@ -50,3 +50,45 @@ h1 {
     background: white;
     border-radius: 4px;
 }
+
+/* 漢堡按鈕 */
+.hamburger {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  font-size: 30px;
+  cursor: pointer;
+  z-index: 1001;
+  color: white;
+}
+
+/* 漢堡選單右側滑出樣式 */
+.side-menu {
+  position: fixed;
+  top: 0;
+  right: -250px; /* 隱藏在右側 */
+  width: 250px;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  transition: right 0.4s ease;
+  padding-top: 60px;
+  z-index: 1000;
+}
+
+.side-menu a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 16px;
+  font-family: "Microsoft JhengHei", "微軟正黑體", sans-serif;
+}
+
+.side-menu a:hover {
+  background-color: white;
+  color: black;
+}
+
+/* 開啟選單時的 class */
+.side-menu.open {
+  right: 0;
+}
