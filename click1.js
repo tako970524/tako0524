@@ -4,7 +4,7 @@
     renderer: 'svg',
     loop: false,
     autoplay: false,
-    path: 'anime/ham.json'
+    path: 'ham.json'
   });
 
   // 初始：停留第一幀
