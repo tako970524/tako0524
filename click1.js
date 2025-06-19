@@ -1,15 +1,29 @@
-const animation = lottie.loadAnimation({
-    container: document.getElementById("hamburger"),
+  // 載入 bodymovin 動畫
+  const hamburgerAnim = lottie.loadAnimation({
+    container: document.getElementById('hamburger'),
     renderer: 'svg',
     loop: false,
     autoplay: false,
-    path: 'anime/ham.json' // 你的動畫 JSON 路徑
-});
+    path: 'anime/ham.json'
+  });
 
-animation.addEventListener('DOMLoaded', () => {
-    animation.goToAndStop(0, true); // 載入後定格第一幀
-});
+  // 初始：停留第一幀
+  hamburgerAnim.goToAndStop(0, true);
 
-document.getElementById("lottie").onclick = () => {
-    animation.play(); // 點擊播放動畫
-};
+  let menuOpen = false;
+
+  document.getElementById('hamburger').addEventListener('click', function () {
+    const sideMenu = document.getElementById('sideMenu');
+
+    if (!menuOpen) {
+      hamburgerAnim.setDirection(1); // 正向
+      hamburgerAnim.play();
+      sideMenu.classList.add('open');
+    } else {
+      hamburgerAnim.setDirection(-1); // 反向
+      hamburgerAnim.play();
+      sideMenu.classList.remove('open');
+    }
+
+    menuOpen = !menuOpen;
+  });
