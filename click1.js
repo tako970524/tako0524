@@ -18,11 +18,11 @@
     if (!menuOpen) {
       hamburgerAnim.setDirection(1); // 正向
       hamburgerAnim.play();
-      sideMenu.classList.add('open');
+      sideMenu.classList.add('open1');
     } else {
       hamburgerAnim.setDirection(-1); // 反向
       hamburgerAnim.play();
-      sideMenu.classList.remove('open');
+      sideMenu.classList.remove('open1');
     }
 
     menuOpen = !menuOpen;
