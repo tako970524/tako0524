@@ -1,4 +1,4 @@
-  // 載入 bodymovin 動畫
+  //載入bodymovin動畫
   const hamburgerAnim = lottie.loadAnimation({
     container: document.getElementById('hamburger'),
     renderer: 'svg',
@@ -7,7 +7,7 @@
     path: 'anime/ham.json'
   });
 
-  // 初始：停留第一幀
+  //停留第一幀
   hamburgerAnim.goToAndStop(0, true);
 
   let menuOpen = false;
