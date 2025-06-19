@@ -69,13 +69,39 @@ body {
   background-color: rgba(255, 255, 255, 0.05);
   padding: 20px;
   border-radius: 10px;
-  max-width: 600px;
+  max-width: 1500px;
   color: white;
   font-family: "Microsoft JhengHei", "微軟正黑體", sans-serif;
   box-shadow: 0 0 10px rgba(255,255,255,0.2);
 }
 
 .music-player audio {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.HA {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.HA1, .HA2 {
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 400px;
+  color: white;
+  font-family: "Microsoft JhengHei", "微軟正黑體", sans-serif;
+  text-align: center;
+}
+
+.HA1 img, .HA2 img {
+  width: 100%;
+  height: auto;
+}
+
+audio {
   width: 100%;
   margin-top: 10px;
 }
